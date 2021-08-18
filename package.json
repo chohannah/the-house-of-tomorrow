@@ -1,0 +1,25 @@
+{
+  "name": "the-house-of-tomorrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr styles/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yejinc/the-house-of-tomorrow.git"
+  },
+  "keywords": [],
+  "author": "Yejin Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yejinc/the-house-of-tomorrow/issues"
+  },
+  "homepage": "https://github.com/yejinc/the-house-of-tomorrow#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
