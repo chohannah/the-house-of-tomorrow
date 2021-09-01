@@ -1,0 +1,22 @@
+.gnb-nav {
+  ul {
+    padding-left: 0;
+  }
+
+  &-list {
+    @include flex(start);
+  }
+
+  &-item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @include text-style(18, $primary);
+      font-weight: 700;
+    }
+  }
+}

@@ -7,26 +7,6 @@
     height: 50px;
   }
 
-  &-button-group {
-    @include flex(end);
-  }
-
-  &-search-button {
-    margin-right: 4px;
-  }
-
-  &-icon-button {
-    @include flex();
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-menu-button {
-    color: $blue;
-  }
-
   .logo {
     @include pos-center;
 
@@ -37,6 +17,81 @@
 
       a {
         display: block;
+      }
+    }
+  }
+
+  &-menu-button {
+    color: $blue;
+  }
+
+  &-right {
+    .button-group {
+      @include flex(end);
+    }
+  }
+
+  &-icon-button {
+    @include flex();
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: $secondary;
+  }
+
+  &-search-button {
+    margin-right: 4px;
+  }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    &-left {
+      @include flex(start);
+    }
+
+    .logo {
+      position: static;
+      margin-right: 32px;
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    &-right {
+      @include flex(end);
+
+      .button-group {
+        margin-right: 24px;
+      }
+
+      .btn-fill-primary {
+        width: 88px;
+
+        i {
+          margin-left: 4px;
+        }
+      }
+    }
+
+    &-icon-button {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
       }
     }
   }
