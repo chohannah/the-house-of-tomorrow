@@ -21,35 +21,19 @@
     }
   }
 
-  &-menu-button {
-    color: $blue;
-  }
-
   &-right {
     .button-group {
       @include flex(end);
     }
   }
 
-  &-icon-button {
-    @include flex();
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-search-button {
+  &-is-search {
     margin-right: 4px;
   }
 
   @include responsive(T) {
     &-wrapper {
       height: 80px;
-    }
-
-    &-left {
-      @include flex(start);
     }
 
     .logo {
@@ -60,6 +44,10 @@
       img {
         height: 24px;
       }
+    }
+
+    &-left {
+      @include flex(start);
     }
 
     &-right {
