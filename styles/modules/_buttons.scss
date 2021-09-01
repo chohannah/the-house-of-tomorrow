@@ -47,7 +47,7 @@
 
 .btn-ghost {
   @extend %btn-base;
-  font-weight: 700;
+
   color: $primary;
   background-color: transparent;
   transition: color 200ms ease-in-out;
