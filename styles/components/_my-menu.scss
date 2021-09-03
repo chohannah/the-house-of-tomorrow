@@ -9,6 +9,10 @@
     width: $buutton-size;
     height: $buutton-size;
     overflow: hidden;
+    background-image: url('./assets/images/img-user-default.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     border: 3px solid $white;
     border-radius: 50%;
     transition: border-color 200ms ease-in-out;
@@ -68,6 +72,7 @@
     a,
     button {
       @include flex(start);
+      @include text-style(16, $primary);
       height: 44px;
       padding: 8px;
     }
