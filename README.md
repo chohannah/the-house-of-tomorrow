@@ -1,6 +1,8 @@
 # The House of Tomorrow(내일의 집)
 
-## GNB
+## Login & Logout Status: 로그인 했을 때 & 로그인 안 했을 때
+
+### 1. GNB
 
 - 로그인 안 했을 때
 
@@ -80,3 +82,59 @@
   </button>
 </div>
 ```
+
+### 2. Sidebar
+
+#### 2-1. User avatar & user name
+
+- 로그인 했을 때
+
+```html
+<div class="sidebar-user">
+  <a href="/">
+    <div class="avatar-24">
+      <img src="./assets/images/img-user-01.jpg" alt="User image" />
+    </div>
+    <strong class="user-name">
+      조지 거슈윈 조지 거슈윈 조지 거슈윈 조지 거슈윈 조지 거슈윈 조지 거슈윈
+    </strong></a
+  >
+</div>
+```
+
+- 로그인 안 했을 때
+
+```html
+<div class="sidebar-auth">
+  <a href="/" class="btn-outlined btn-40">로그인</a>
+  <a href="/" class="btn-fill-primary btn-40">회원가입</a>
+</div>
+```
+
+#### 2-2. My menu
+
+- 로그인 했을 때
+
+```html
+<div class="sidebar-menu-my">
+  <ul class="sidebar-menu-my-list">
+    <li class="sidebar-menu-my-list-item">
+      <a href="/">마이페이지</a>
+    </li>
+    <li class="sidebar-menu-my-list-item">
+      <a href="/">나의 쇼핑</a>
+    </li>
+    <li class="sidebar-menu-my-list-item">
+      <a href="/">스크랩북</a>
+    </li>
+    <li class="sidebar-menu-my-list-item">
+      <a href="/">알림</a>
+    </li>
+    <li class="sidebar-menu-my-list-item">
+      <a href="/">이벤트 </a>
+    </li>
+  </ul>
+</div>
+```
+
+- 로그인 안 했을 때: none
