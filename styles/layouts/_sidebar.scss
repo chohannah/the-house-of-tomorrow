@@ -8,9 +8,11 @@
 
     .logo {
       @include flex(start);
+
       a {
         display: block;
       }
+
       img {
         display: block;
         width: auto;
@@ -26,8 +28,6 @@
   }
 
   &-user {
-    // padding: 32px 0;
-
     a {
       @include text-style(14, $primary);
       @include flex(start);
@@ -51,7 +51,6 @@
 
   &-auth {
     @include flex(between);
-    // padding: 24px 0;
 
     a {
       width: 84px;
