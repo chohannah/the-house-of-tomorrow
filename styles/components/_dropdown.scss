@@ -39,10 +39,10 @@
     }
 
     .sidebar-dropdown-content {
-      max-height: 152px;
+      max-height: 324px + $dropdown-list-padding;
     }
 
-    .sidebar-dropdown-list {
+    .sidebar-dropdown-content-list {
       padding-bottom: $dropdown-list-padding;
     }
   }
