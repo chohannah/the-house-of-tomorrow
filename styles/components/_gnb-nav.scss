@@ -1,10 +1,6 @@
 .gnb-nav {
   $padding: 8px;
 
-  ul {
-    padding-left: 0;
-  }
-
   &-list {
     @include flex(start);
   }
