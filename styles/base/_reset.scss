@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  padding-left: 0; // hidden bug fix
   margin: 0;
   font-family: $font-main;
   -webkit-font-smoothing: antialiased;
