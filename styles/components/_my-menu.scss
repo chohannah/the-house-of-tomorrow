@@ -4,8 +4,23 @@
 
   position: relative;
 
-  &-avatar-button,
   &.is-active {
+    .my-menu.avatar-button {
+      border-color: $blue;
+    }
+
+    .my-menu-content {
+      visibility: visible;
+      opacity: 1;
+      transform: translate3d(
+        -50%,
+        0,
+        0
+      ) !important; //bandaided - need improvement
+    }
+  }
+
+  &-avatar-button {
     width: $buutton-size;
     height: $buutton-size;
     overflow: hidden;
@@ -32,8 +47,17 @@
   &-content {
     @include pos-center-x;
     top: $tooltip-size + $buutton-size + 8px;
+    visibility: hidden;
     border-radius: 4px;
     box-shadow: $dropdown-shadow;
+    opacity: 0;
+    transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out,
+      transform 200ms ease-in-out;
+    transform: translate3d(
+      -50%,
+      -10px,
+      0
+    ) !important; //bandaided - need improvement
 
     &::before,
     &::after {
