@@ -58,7 +58,7 @@
     .logo {
       position: static;
       padding: $padding;
-      margin-right: 32px - ($padding * 2);
+      margin-right: 32px; //- ($padding * 2)
       transform: none;
 
       img {
@@ -90,7 +90,7 @@
       margin-right: 8px;
 
       &:last-child {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
   }
