@@ -51,7 +51,7 @@
     padding-right: 30px;
 
     &-slider {
-      margin: 0 0 8px 0;
+      margin: 0 0 8px;
       overflow: hidden;
       border-radius: 4px;
     }
@@ -91,6 +91,35 @@
       img {
         display: block;
         width: 56px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    @include flex(end, start);
+    flex-direction: row-reverse;
+
+    &-slider {
+      width: 500px;
+      height: 500px;
+    }
+
+    &-thumbnail {
+      margin-right: 8px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+    }
+
+    .thumbnail-item {
+      margin-right: 0;
+      margin-bottom: 8px;
+
+      button,
+      img {
+        width: 75px;
+        height: 75px;
       }
     }
   }
