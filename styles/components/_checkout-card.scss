@@ -23,6 +23,11 @@
     height: 20px;
     font-size: 20px;
     color: $secondary;
+
+    &:hover,
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   .checkout-select {
@@ -39,6 +44,7 @@
       border: 1px solid $border;
       border-radius: 3px;
       appearance: none;
+      transition: border-color 100ms ease-in-out;
     }
 
     i {
@@ -47,6 +53,17 @@
       font-size: 20px;
       color: $tertiary;
       pointer-events: none;
+      transition: border-color 100ms ease-in-out;
+    }
+
+    &:hover {
+      select {
+        border-color: $tertiary;
+      }
+
+      i {
+        color: $secondary;
+      }
     }
   }
 
