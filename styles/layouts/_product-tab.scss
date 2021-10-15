@@ -36,4 +36,25 @@
       color: $secondary;
     }
   }
+
+  @include responsive(T) {
+    height: 54px;
+    background-color: $background;
+    border-bottom: 0;
+
+    &-item {
+      button {
+        @include text-style(16);
+        height: 54px;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      .badge {
+        margin-left: 8px;
+      }
+    }
+  }
 }
