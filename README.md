@@ -4,18 +4,17 @@
 <!-- Header -->
 
 <div align="middle" >
-  <img width="120px;" src="https://user-images.githubusercontent.com/46529118/141477769-90885f88-e95a-4687-89a0-4a440424547e.png"/>
+  <img width="120px;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/285/couch-and-lamp_1f6cb-fe0f.png"/>
 </div>
 
-<h1 align="middle">Vuelog</h2>
-<p align="middle">Blog made with Vue.js</p>
+<h1 align="middle">The House of Tomorrow</h2>
+<p align="middle">Online lifestyle shop made with SASS</p>
 
 <p align="middle">
   <img src="https://img.shields.io/badge/version-1.0.0-yellowgreen?style=flat-square" alt="template version"/>
-  <img src="https://img.shields.io/badge/language-html-red.svg?style=flat-square"/>
-  <img src="https://img.shields.io/badge/language-css-blue.svg?style=flat-square"/>
-  <img src="https://img.shields.io/badge/language-vue-brightgreen"/>
-  <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-HTML-F1652A.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-SASS-BF4080"/>
+  <img src="https://img.shields.io/badge/license-MIT-A51931.svg?style=flat-square"/>
 </p>
 
 <!-- <p align="middle"><a href="#">👉 Project link</a></p> -->
