@@ -1,8 +1,42 @@
-# The House of Tomorrow(내일의 집)
+<br />
+<br />
 
-## Login & Logout Status: 로그인 했을 때 & 로그인 안 했을 때
+<!-- Header -->
 
-### 1. GNB
+<div align="middle" >
+  <img width="120px;" src="https://user-images.githubusercontent.com/46529118/141477769-90885f88-e95a-4687-89a0-4a440424547e.png"/>
+</div>
+
+<h1 align="middle">Vuelog</h2>
+<p align="middle">Blog made with Vue.js</p>
+
+<p align="middle">
+  <img src="https://img.shields.io/badge/version-1.0.0-yellowgreen?style=flat-square" alt="template version"/>
+  <img src="https://img.shields.io/badge/language-html-red.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-css-blue.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-vue-brightgreen"/>
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square"/>
+</p>
+
+<!-- <p align="middle"><a href="#">👉 Project link</a></p> -->
+
+<br />
+<br />
+
+<!-- Content -->
+
+## 📸 screenshots
+
+<img src="https://user-images.githubusercontent.com/46529118/141482440-2b816eee-9778-4913-a2a7-d82260703283.png" />
+
+<br />
+<br />
+
+<h2>❗ Status</h2>
+
+### Login & Logout Status: 로그인 했을 때 & 로그인 안 했을 때
+
+#### 1. GNB
 
 - 로그인 안 했을 때
 
@@ -28,6 +62,8 @@
   </div>
 </div>
 ```
+
+<br />
 
 - 로그인 했을 때
 
@@ -83,9 +119,11 @@
 </div>
 ```
 
-### 2. Sidebar
+<br />
 
-#### 2-1. User avatar & user name
+#### 2. Sidebar
+
+##### 2-1. User avatar & user name
 
 - 로그인 했을 때
 
@@ -111,7 +149,7 @@
 </div>
 ```
 
-#### 2-2. My menu
+##### 2-2. My menu
 
 - 로그인 했을 때
 
@@ -138,3 +176,31 @@
 ```
 
 - 로그인 안 했을 때: none
+
+<br />
+<br />
+
+<!-- Todo list -->
+
+### 👀 Todo list
+
+- [x] Base
+  - [x] Reset & Normalise CSS
+  - [x] Prepare assets
+- [x] Variables
+- [x] Mixins
+- [x] Modules
+- [ ] Components
+  - [x] GNB
+  - [x] Sidebar
+  - [x] Search Modal
+  - [x] Search History
+  - [x] LNG
+  - [x] Global Footer
+  - [x] Breadcrumb & Product Carousel
+  - [x] Product Info & Order Form
+  - [x] Page Structure & Shared Components
+  - [ ] 🚧 Product Section
+  - [ ] Order Forms
+  - [ ] Dialogs
+- [ ] Javascript
