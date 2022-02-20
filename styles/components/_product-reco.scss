@@ -11,6 +11,20 @@
     &:nth-child(2) {
       margin-bottom: 20px;
     }
+
+    a {
+      display: block;
+
+      &:active {
+        img {
+          transform: scale(1.1);
+        }
+
+        .product-card-title {
+          opacity: 0.4;
+        }
+      }
+    }
   }
 
   @include responsive(T) {
@@ -24,6 +38,16 @@
       &:nth-child(1),
       &:nth-child(2) {
         margin-bottom: 0;
+      }
+
+      a:hover {
+        img {
+          transform: scale(1.1);
+        }
+
+        .product-card-title {
+          opacity: 0.4;
+        }
       }
     }
   }
