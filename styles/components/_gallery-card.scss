@@ -3,14 +3,6 @@
   overflow: hidden;
   border-radius: 6px;
 
-  &-image {
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-
   &-detail {
     @include flex(start);
     position: absolute;
