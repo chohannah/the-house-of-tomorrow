@@ -3,16 +3,24 @@
   overflow: hidden;
 
   &-slider {
+    position: relative;
+
     margin-bottom: 4px;
   }
 
   &-controls {
+    @include pos-center;
+    @include flex(between);
+    padding: 0 52px;
+    width: 100%;
+
     .control-button {
       @include flex;
       width: 40px;
       height: 40px;
       font-size: 28px;
       color: $primary;
+      background-color: $white;
       border-radius: 50%;
       transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 
@@ -33,6 +41,10 @@
           margin-right: -3px;
           transform: rotate(-90deg);
         }
+      }
+
+      &[disabled] {
+        visibility: hidden;
       }
     }
   }
