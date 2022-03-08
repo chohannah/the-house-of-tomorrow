@@ -1,0 +1,9 @@
+.order-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $order-cta-level;
+  width: 100%;
+  height: $order-cta-height;
+  background-color: hotpink;
+}
