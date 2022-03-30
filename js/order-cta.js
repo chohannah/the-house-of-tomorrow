@@ -5,12 +5,16 @@ console.log(orderCtaBuyButton, orderCtaBookmarkButton)
 const orderFormModal = document.querySelector('.order-form-modal')
 const orderFormModalOverlay = document.querySelector('.overlay')
 
-orderCtaBuyButton.addEventListener('click', function () {
+function openOrderFormModal() {
   orderFormModal.classList.add('is-open')
   orderFormModalOverlay.classList.add('is-active')
-})
+}
 
-orderFormModalOverlay.addEventListener('click', function () {
+orderCtaBuyButton.addEventListener('click', openOrderFormModal)
+
+function closeOrderFormModal() {
   orderFormModal.classList.remove('is-open')
   orderFormModalOverlay.classList.remove('is-active')
-})
+}
+
+orderFormModalOverlay.addEventListener('click', closeOrderFormModal)
