@@ -25,16 +25,15 @@ function toggleOrderCtaBookmark() {
   let newCount = count
 
   if (this.classList.contains('is-active')) {
-    icon.setAttribute('class', 'ic-bookmark')
     newCount = newCount - 1
   } else {
-    icon.setAttribute('class', 'ic-bookmark-filled')
     newCount = newCount + 1
   }
 
   countSpan.innerText = newCount.toLocaleString()
   countSpan.setAttribute('aria-label', `북마크 ${newCount.toLocaleString()}회`)
-
+  icon.classList.toggle('ic-bookmark')
+  icon.classList.toggle('ic-bookmark-filled')
   this.classList.toggle('is-active')
 }
 
