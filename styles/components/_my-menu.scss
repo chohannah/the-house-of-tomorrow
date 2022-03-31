@@ -12,11 +12,7 @@
     .my-menu-content {
       visibility: visible;
       opacity: 1;
-      transform: translate3d(
-        -50%,
-        0,
-        0
-      ) !important; //bandaided - need improvement
+      transform: translate3d(-50%, 0, 0);
     }
   }
 
@@ -53,11 +49,7 @@
     opacity: 0;
     transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out,
       transform 200ms ease-in-out;
-    transform: translate3d(
-      -50%,
-      -10px,
-      0
-    ) !important; //bandaided - need improvement
+    transform: translate3d(-50%, -10px, 0);
 
     &::before,
     &::after {
