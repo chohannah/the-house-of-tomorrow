@@ -328,7 +328,8 @@ html {
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
-  color: #3f4150; }
+  color: #3f4150;
+  transform: matrix(0); }
 
 h1 {
   margin: 0; }
@@ -588,7 +589,7 @@ address {
   background-color: transparent;
   transition: color 200ms ease-in-out; }
   .btn-ghost:not(:disabled):hover {
-    background-color: #8c8d96; }
+    color: #8c8d96; }
 
 .btn-32 {
   font-size: 14px;
@@ -845,12 +846,12 @@ i {
 
 .my-menu {
   position: relative; }
-  .my-menu.is-active .my-menu.avatar-button {
+  .my-menu.is-active .my-menu-avatar-button {
     border-color: #3da5f5; }
   .my-menu.is-active .my-menu-content {
     visibility: visible;
     opacity: 1;
-    transform: translate3d(-50%, 0, 0) !important; }
+    transform: translate3d(-50%, 0, 0); }
   .my-menu-avatar-button {
     width: 32px;
     height: 32px;
@@ -879,7 +880,7 @@ i {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
     opacity: 0;
     transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out, transform 200ms ease-in-out;
-    transform: translate3d(-50%, -10px, 0) !important; }
+    transform: translate3d(-50%, -10px, 0); }
     .my-menu-content::before, .my-menu-content::after {
       position: absolute;
       left: 50%;
@@ -913,11 +914,12 @@ i {
     line-height: 24px;
     letter-spacing: -0.01em;
     color: #3f4150;
+    width: 100%;
     height: 44px;
-    padding: 8px; }
-  .my-menu-item:hover {
-    background-color: #f7f8fa;
+    padding: 8px;
     border-radius: 2px; }
+  .my-menu-item:hover {
+    background-color: #f7f8fa; }
 
 .sidebar-dropdown.is-active .sidebar-dropdown-button {
   color: #3da5f5; }
@@ -2487,7 +2489,6 @@ i {
 .search-modal {
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 300;
   width: 100%;
   height: 100vh;
@@ -2513,7 +2514,7 @@ i {
 
 .global-header {
   width: 100%;
-  height: 100px; }
+  height: 90px; }
   .global-header .gnb,
   .global-header .lnb {
     position: fixed;
@@ -2521,10 +2522,10 @@ i {
     width: 100%; }
   .global-header .gnb {
     top: 0;
-    z-index: 50; }
+    z-index: 60; }
   .global-header .lnb {
     top: 50px;
-    z-index: 60; }
+    z-index: 50; }
   @media screen and (min-width: 768px) {
     .global-header {
       height: 130px; }
@@ -2643,12 +2644,226 @@ i {
         margin-left: 8px; } }
 
 .order-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 40;
   width: 100%;
   height: 56px;
-  background-color: hotpink; }
+  padding: 0 4px;
+  background-color: #fff; }
+  .order-cta .btn-ghost {
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 72px;
+    margin-right: 4px; }
+    .order-cta .btn-ghost.is-active i {
+      color: #3da5f5; }
+    .order-cta .btn-ghost i {
+      font-size: 24px;
+      color: #3f4150; }
+    .order-cta .btn-ghost span {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: -0.005em;
+      color: #8c8d96; }
+  .order-cta .btn-fill-primary {
+    flex-grow: 1; }
+
+.order-form-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 400;
+  display: none;
+  padding-top: 16px;
+  width: 100%;
+  max-height: 81vh;
+  overflow-y: auto;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  overscroll-behavior: contain; }
+  .order-form-modal.is-open {
+    display: block;
+    animation-name: modal-fade-in;
+    animation-duration: 300ms; }
+  .order-form-modal .order-checkouts {
+    margin-bottom: 16px; }
+  .order-form-modal .order-summary {
+    margin-bottom: 72px; }
+  .order-form-modal .order-inputs {
+    margin-bottom: 8px; }
+  .order-form-modal .button-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+    width: 100%;
+    background-color: #fff; }
+  @media screen and (min-width: 768px) {
+    .order-form-modal {
+      padding-top: 32px; } }
+
+@keyframes modal-fade-in {
+  0% {
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+.floating-order-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: sticky;
+  top: 184px;
+  flex-direction: column;
+  max-height: calc(100vh - 184px);
+  min-height: calc(100vh - 370px);
+  padding: 24px 0; }
+  .floating-order-form > * {
+    width: 100%; }
+  .floating-order-form .order-inputs,
+  .floating-order-form .order-summary,
+  .floating-order-form .button-group {
+    flex-grow: 0;
+    flex-shrink: 0; }
+  .floating-order-form .order-checkouts {
+    flex-grow: 1;
+    overflow-y: auto; }
+    .floating-order-form .order-checkouts::-webkit-scrollbar {
+      display: none; }
+  .floating-order-form .button-group .btn-bookmark {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 55px;
+    border: 1px solid #e0e2e7;
+    border-radius: 4px;
+    transition: background-color 200ms ease-in-out; }
+    .floating-order-form .button-group .btn-bookmark.is-active i {
+      color: #3da5f5; }
+    .floating-order-form .button-group .btn-bookmark:hover {
+      background-color: #f7f8fa; }
+    .floating-order-form .button-group .btn-bookmark i {
+      font-size: 32px;
+      color: #3f4150; }
+
+.cart-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 500;
+  display: none;
+  width: calc(100% - 30px);
+  max-width: 360px;
+  padding: 40px 24px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px; }
+  .cart-modal.is-active {
+    display: block; }
+  .cart-modal .cart-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #191a20;
+    margin-bottom: 24px; }
+  .cart-modal .button-group {
+    width: 100%; }
+    .cart-modal .button-group a,
+    .cart-modal .button-group button {
+      width: 100%; }
+    .cart-modal .button-group a {
+      margin-bottom: 8px; }
+  @media screen and (min-width: 1200px) {
+    .cart-modal {
+      padding-right: 32px;
+      padding-left: 32px; }
+      .cart-modal .cart-title {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px; }
+      .cart-modal .button-group a,
+      .cart-modal .button-group button {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        height: 55px; } }
+
+.bookmark-toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 600;
+  display: none;
+  width: 100%;
+  height: 56px;
+  padding-right: 15px;
+  padding-left: 36px;
+  background-color: #fff;
+  box-shadow: 0 -4px 20px rgba(63, 65, 80, 0.3); }
+  .bookmark-toast.is-active {
+    display: flex; }
+  .bookmark-toast .bookmark-title {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #3f4150;
+    font-weight: 400; }
+  .bookmark-toast .close-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    color: #b2b3b9; }
+    .bookmark-toast .close-button:active {
+      color: #8c8d96; }
+  .bookmark-toast .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .bookmark-toast .button-group a {
+      margin-right: 4px; }
+  @media screen and (min-width: 1200px) {
+    .bookmark-toast {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+      max-width: 480px;
+      padding-right: 20px;
+      padding-left: 56px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(63, 65, 80, 0.3); }
+      .bookmark-toast .bookmark-title {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em; }
+      .bookmark-toast .close-button {
+        left: 10px;
+        font-size: 24px; }
+        .bookmark-toast .close-button:hover {
+          color: #8c8d96; }
+      .bookmark-toast .button-group a {
+        margin-right: 8px; } }
 
 /*# sourceMappingURL=style.css.map */
