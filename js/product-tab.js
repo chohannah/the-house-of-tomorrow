@@ -79,6 +79,16 @@ function updateTabOnScroll() {
     newActiveTab = productTabButtonList[0]
   }
 
+  // 추가: 페이지 끝까지 스크롤을 했을 때, newActiveTab = productTabButtonList[4]
+  // window.scrollY + window.innerHeight === body의 전체 height
+  // window.innerwidth = 1200
+
+  const bodyHeight =
+    document.body.offsetHeight + (window.innerWidth < 1200 ? 56 : 0)
+  if (window.scrollY + window.innerHeight === bodyHeight) {
+    newActiveTab = productTabButtonList[4]
+  }
+
   if (newActiveTab) {
     newActiveTab = newActiveTab.parentNode
 
