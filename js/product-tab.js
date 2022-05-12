@@ -56,6 +56,8 @@ function detectTabPanelPosition() {
     const positionY = window.scrollY + panel.getBoundingClientRect().top
     productTabPanelPositionMap[id] = positionY
   })
+
+  updateTabOnScroll()
 }
 
 function updateTabOnScroll() {
@@ -82,7 +84,11 @@ function updateTabOnScroll() {
 
     if (newActiveTab !== currentActiveTab) {
       newActiveTab.classList.add('is-active')
-      currentActiveTab.classList.remove('is-active')
+
+      if (currentActiveTab !== null) {
+        currentActiveTab.classList.remove('is-active')
+      }
+
       currentActiveTab = newActiveTab
     }
   }
