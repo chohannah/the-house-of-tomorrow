@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/yejinc/the-house-of-tomorrow#readme",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
